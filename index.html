@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield - Cybersecurity Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #111827 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .hacker-text {
+            font-family: 'Courier New', monospace;
+            background-color: #111827;
+            color: #00ff00;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .terminal {
+            background-color: #1f2937;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .terminal-header {
+            background-color: #374151;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+        }
+        .terminal-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+        .terminal-content {
+            padding: 16px;
+            font-family: 'Courier New', monospace;
+            color: #00ff00;
+            line-height: 1.5;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        .typing-animation {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Navigation -->
+    <nav class="gradient-bg py-4 px-6 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-shield-alt text-blue-400 text-2xl"></i>
+                <span class="text-xl font-bold">Cyber<span class="text-blue-400">Shield</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#services" class="hover:text-blue-400 transition">Services</a>
+                <a href="#about" class="hover:text-blue-400 transition">About</a>
+                <a href="#tools" class="hover:text-blue-400 transition">Tools</a>
+                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+            </div>
+            <button class="md:hidden text-xl" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden mt-4" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="#services" class="hover:text-blue-400 transition">Services</a>
+                <a href="#about" class="hover:text-blue-400 transition">About</a>
+                <a href="#tools" class="hover:text-blue-400 transition">Tools</a>
+                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-20 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Secure Your Digital <span class="text-blue-400">Assets</span></h1>
+                <p class="text-xl mb-8 text-gray-300">Professional cybersecurity services to protect your systems from modern threats.</p>
+                <div class="flex space-x-4">
+                    <a href="#services" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">Our Services</a>
+                    <a href="#contact" class="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-6 py-3 rounded-lg font-medium transition">Contact Us</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-button bg-red-500"></div>
+                        <div class="terminal-button bg-yellow-500"></div>
+                        <div class="terminal-button bg-green-500"></div>
+                        <span class="text-gray-200 ml-2 text-sm">root@cybershield:~</span>
+                    </div>
+                    <div class="terminal-content">
+                        <p class="typing-animation">$ sudo apt-get install cyber-security<br>
+                        > Scanning vulnerabilities...<br>
+                        > Firewall activated...<br>
+                        > Encryption enabled...<br>
+                        > System secured!</p>
+                        <p class="mt-4">$ _</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-6 bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Our <span class="text-blue-400">Services</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Kali Linux Service -->
+                <div class="service-card bg-gray-700 rounded-lg p-6 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-500 p-3 rounded-full mr-4">
+                            <i class="fas fa-terminal text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Kali Linux</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">Professional penetration testing and security auditing using the industry-standard Kali Linux platform.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                            <span>Network vulnerability scanning</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                            <span>Wireless security assessments</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                            <span>Password cracking</span>
+                        </li>
+                    </ul>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">Learn More</button>
+                </div>
+
+                <!-- Bug Hunter Service -->
+                <div class="service-card bg-gray-700 rounded-lg p-6 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-500 p-3 rounded-full mr-4">
+                            <i class="fas fa-bug text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Bug Hunter</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">Comprehensive bug bounty and vulnerability discovery services to identify security flaws before attackers do.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Web application testing</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>API security testing</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Zero-day vulnerability research</span>
+                        </li>
+                    </ul>
+                    <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">Learn More</button>
+                </div>
+
+                <!-- Hash Cracker Service -->
+                <div class="service-card bg-gray-700 rounded-lg p-6 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-500 p-3 rounded-full mr-4">
+                            <i class="fas fa-unlock-alt text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Hash Cracker</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">Advanced hash cracking services to recover lost passwords and test password strength policies.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-2"></i>
+                            <span>MD5, SHA1, SHA256 cracking</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-2"></i>
+                            <span>Rainbow table attacks</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-2"></i>
+                            <span>Custom dictionary attacks</span>
+                        </li>
+                    </ul>
+                    <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-6 bg-gray-900">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-6">About <span class="text-blue-400">CyberShield</span></h2>
+                    <p class="text-gray-300 mb-4">We are a team of certified cybersecurity professionals dedicated to helping organizations secure their digital infrastructure against evolving threats.</p>
+                    <p class="text-gray-300 mb-6">With over 10 years of combined experience in penetration testing, vulnerability assessment, and ethical hacking, we provide comprehensive security solutions tailored to your needs.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-certificate text-blue-400 mr-2"></i>
+                            <span class="text-sm">Certified Ethical Hackers</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-lock text-blue-400 mr-2"></i>
+                            <span class="text-sm">GDPR Compliant</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-user-secret text-blue-400 mr-2"></i>
+                            <span class="text-sm">100% Confidential</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-800 rounded-lg p-6">
+                        <h3 class="text-xl font-bold mb-4">Our <span class="text-blue-400">Methodology</span></h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">1</div>
+                                <div>
+                                    <h4 class="font-medium">Reconnaissance</h4>
+                                    <p class="text-gray-400 text-sm">Gathering information about the target system</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">2</div>
+                                <div>
+                                    <h4 class="font-medium">Vulnerability Analysis</h4>
+                                    <p class="text-gray-400 text-sm">Identifying potential security weaknesses</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">3</div>
+                                <div>
+                                    <h4 class="font-medium">Exploitation</h4>
+                                    <p class="text-gray-400 text-sm">Attempting to exploit identified vulnerabilities</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">4</div>
+                                <div>
+                                    <h4 class="font-medium">Reporting</h4>
+                                    <p class="text-gray-400 text-sm">Detailed documentation of findings and recommendations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="py-16 px-6 bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Our <span class="text-blue-400">Tools</span></h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-gray-700 rounded-lg p-6 flex flex-col items-center">
+                    <i class="fab fa-linux text-4xl text-orange-500 mb-4"></i>
+                    <h3 class="font-bold">Kali Linux</h3>
+                    <p class="text-gray-400 text-sm text-center mt-2">Penetration testing distribution</p>
+                </div>
+                <div class="bg-gray-700 rounded-lg p-6 flex flex-col items-center">
+                    <i class="fas fa-network-wired text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="font-bold">Nmap</h3>
+                    <p class="text-gray-400 text-sm text-center mt-2">Network scanning tool</p>
+                </div>
+                <div class="bg-gray-700 rounded-lg p-6 flex flex-col items-center">
+                    <i class="fas fa-key text-4xl text-purple-500 mb-4"></i>
+                    <h3 class="font-bold">John the Ripper</h3>
+                    <p class="text-gray-400 text-sm text-center mt-2">Password cracking tool</p>
+                </div>
+                <div class="bg-gray-700 rounded-lg p-6 flex flex-col items-center">
+                    <i class="fas fa-globe text-4xl text-green-500 mb-4"></i>
+                    <h3 class="font-bold">Burp Suite</h3>
+                    <p class="text-gray-400 text-sm text-center mt-2">Web vulnerability scanner</p>
+                </div>
+                <div class="bg-gray-700 rounded-lg p-6 flex flex-col items-center">
+                    <i class="fas fa-wifi text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="font-bold">Aircrack-ng</h3>
+                    <p class="text-gray-400 text-sm text-center mt-2">WiFi security tool</p>
+                </div>
+                <div class="bg-gray-700 rounded-lg p-6 flex flex-col items-center">
+                    <i class="fas fa-code text-4xl text-red-500 mb-4"></i>
+                    <h3 class="font-bold">Metasploit</h3>
+                    <p class="text-gray-400 text-sm text-center mt-2">Exploitation framework</p>
+                </div>
+                <div class="bg-gray-700 rounded-lg p-6 flex flex-col items-center">
+                    <i class="fas fa-shield-alt text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="font-bold">Wireshark</h3>
+                    <p class="text-gray-400 text-sm text-center mt-2">Network protocol analyzer</p>
+                </div>
+                <div class="bg-gray-700 rounded-lg p-6 flex flex-col items-center">
+                    <i class="fas fa-lock text-4xl text-green-400 mb-4"></i>
+                    <h3 class="font-bold">Hashcat</h3>
+                    <p class="text-gray-400 text-sm text-center mt-2">Advanced password recovery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 px-6 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Client <span class="text-blue-400">Testimonials</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-4">JD</div>
+                        <div>
+                            <h4 class="font-bold">John Doe</h4>
+                            <p class="text-gray-400 text-sm">CTO, TechCorp</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"CyberShield's penetration testing revealed critical vulnerabilities in our web application that we were completely unaware of. Their detailed report helped us secure our systems effectively."</p>
+                    <div class="flex mt-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white font-bold mr-4">AS</div>
+                        <div>
+                            <h4 class="font-bold">Alice Smith</h4>
+                            <p class="text-gray-400 text-sm">Security Manager, FinSecure</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"The hash cracking service helped us recover important encrypted files after a ransomware attack. Their team was professional and worked around the clock to assist us."</p>
+                    <div class="flex mt-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star-half-alt text-yellow-400"></i>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold mr-4">RJ</div>
+                        <div>
+                            <h4 class="font-bold">Robert Johnson</h4>
+                            <p class="text-gray-400 text-sm">IT Director, HealthNet</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"Their bug bounty program helped us identify and fix security issues in our patient portal before they could be exploited. Highly recommended for healthcare organizations."</p>
+                    <div class="flex mt-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6 bg-gray-800">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">Get In <span class="text-blue-400">Touch</span></h2>
+                <div class="bg-gray-700 rounded-lg p-8">
+                    <form id="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-1">Name</label>
+                                <input type="text" id="name" class="w-full bg-gray-600 border border-gray-500 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                                <input type="email" id="email" class="w-full bg-gray-600 border border-gray-500 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="subject" class="block text-sm font-medium mb-1">Subject</label>
+                                <input type="text" id="subject" class="w-full bg-gray-600 border border-gray-500 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                                <textarea id="message" rows="5" class="w-full bg-gray-600 border border-gray-500 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition w-full md:w-auto">Send Message</button>
+                        </div>
+                    </form>
+                    <div id="form-success" class="hidden mt-4 p-4 bg-green-700 rounded-lg">
+                        <p class="text-white">Your message has been sent successfully! We'll get back to you soon.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                    <div class="bg-gray-700 rounded-lg p-6 flex items-center">
+                        <div class="bg-blue-500 p-3 rounded-full mr-4">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Location</h4>
+                            <p class="text-gray-400">Cyber Tower, Security District</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg p-6 flex items-center">
+                        <div class="bg-green-500 p-3 rounded-full mr-4">
+                            <i class="fas fa-envelope text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Email</h4>
+                            <p class="text-gray-400">contact@cybershield.com</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-700 rounded-lg p-6 flex items-center">
+                        <div class="bg-purple-500 p-3 rounded-full mr-4">
+                            <i class="fas fa-phone-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Phone</h4>
+                            <p class="text-gray-400">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-shield-alt text-blue-400 text-2xl"></i>
+                        <span class="text-xl font-bold">Cyber<span class="text-blue-400">Shield</span></span>
+                    </div>
+                    <p class="text-gray-300">Protecting your digital assets with cutting-edge cybersecurity solutions.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-300 hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-blue-400 transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-blue-400 transition"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-blue-400 transition"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Kali Linux</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Bug Hunter</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Hash Cracker</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Penetration Testing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Whitepapers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Security Tools</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Training</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Ethical Hacking Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-blue-400 transition">Responsible Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 CyberShield. All rights reserved. <span class="hacker-text">#StaySecure</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            const successMessage = document.getElementById('form-success');
+            successMessage.classList.remove('hidden');
+            
+            // Reset form
+            this.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+            }, 5000);
+        });
+
+        // Terminal typing effect
+        const terminalLines = [
+            "$ nmap -sV 192.168.1.1",
+            "> Scanning open ports...",
+            "> Detecting service versions...",
+            "> Vulnerability assessment complete",
+            "$ _"
+        ];
+        
+        let currentLine = 0;
+        const terminalContent = document.querySelector('.terminal-content');
+        
+        function typeTerminal() {
+            if (currentLine < terminalLines.length) {
+                const line = document.createElement('p');
+                terminalContent.appendChild(line);
+                
+                let i = 0;
+                const typing = setInterval(() => {
+                    if (i < terminalLines[currentLine].length) {
+                        line.textContent += terminalLines[currentLine].charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(typing);
+                        currentLine++;
+                        setTimeout(typeTerminal, 500);
+                    }
+                }, 50);
+            } else {
+                // Reset after a delay
+                setTimeout(() => {
+                    terminalContent.innerHTML = '<p class="typing-animation">$ sudo apt-get install cyber-security<br>> Scanning vulnerabilities...<br>> Firewall activated...<br>> Encryption enabled...<br>> System secured!</p><p class="mt-4">$ _</p>';
+                    currentLine = 0;
+                    setTimeout(typeTerminal, 10000);
+                }, 5000);
+            }
+        }
+        
+        // Start the terminal animation after initial typing completes
+        setTimeout(typeTerminal, 4000);
+    </script>
+</body>
+</html>
